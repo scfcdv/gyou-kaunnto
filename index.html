@@ -1,0 +1,15 @@
+<link rel="icon" href="https://scfcdv.github.io/homeweb2/favicon.ico">
+<title>行カウント</title>
+<style>
+textarea {
+width: 300px;
+height: 150px;}
+</style>
+<textarea id="textArea" oninput="countLines()"></textarea>
+<p>行数: <span id="lineCount">1</span></p>
+<script>
+function countLines() {
+var textArea = document.getElementById('textArea');
+var lineCount = (textArea.value.match(/\n/g) || []).length + 1;
+document.getElementById('lineCount').textContent = lineCount;}
+</script>
